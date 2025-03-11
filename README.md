@@ -148,20 +148,12 @@
     </tr>
 </table>
 
-## UI
+## 看板
 
-Spark:
-![overview](document/manual/img/overview.png)
-![overview-1](document/manual/img/overview-1.png)
-![tasks](document/manual/img/tasks.png)
-![onclick](document/manual/img/onclick.png)
-![application](document/manual/img/application.png)
-![cpu](document/manual/img/cpu.png)
-![memory](document/manual/img/memory.png)
-
-Flink:
-![overview](document/manual/img/flink-overview-1.png)
-![overview-1](document/manual/img/flink-overview-2.png)
-![tasks](document/manual/img/flink-list.png)
-![report](document/manual/img/flink-report.png)
-=======
+全链路诊断:
+![全链路诊断看板1](yarn-task-diag/工作流2/全链路诊断看板1.png)
+![全链路诊断看板2](yarn-task-diag/工作流2/全链路诊断看板2.png)
+![全链路诊断看板3](yarn-task-diag/工作流2/全链路诊断看板3.png)
+![全链路诊断看板4](yarn-task-diag/工作流2/全链路诊断看板4.png)
+报错任务诊断:
+![报错任务看板1](yarn-task-diag/工作流1/调度任务报错诊断.png)
