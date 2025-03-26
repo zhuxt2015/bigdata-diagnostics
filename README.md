@@ -6,22 +6,22 @@
 其主要功能特性如下：
 
 - 非侵入式，即时诊断，无需修改已有的调度平台，即可体验诊断效果。
+- 支持HDFS文件元数据解析和诊断
+- 支持StarRocks引擎诊断分析
 - 支持多种主流调度平台，例如DolphinScheduler 1.x、2.x和3.x。
 - 支持多版本Spark、MapReduce、Hadoop 2.x和3.x 任务日志诊断和解析。
 - 支持工作流层异常诊断，识别各种失败和基线耗时异常问题。
 - 支持引擎层异常诊断，包含数据倾斜、大表扫描、内存浪费等14种异常类型。
 
 ## 支持组件
-- [ ] ChatGPT
+- [x] HDFS
+- [x] StarRocks
 - [x] Spark
-- [ ] Flink
 - [x] Mapreduce
-- [ ] Trino
-- [ ] Airflow
 - [x] DolphinScheduler
 
-## 文档
-
+## 架构图
+![这是图片](./大数据诊断架构图.png "Magic Gardens")
 
 ## 支持诊断类型
 
@@ -146,7 +146,40 @@
         <td>GC异常</td>
         <td>GC时间相对CPU时间占比过高的任务</td>
     </tr>
+    <tr>
+        <td rowspan="3">HDFS</td>
+        <td rowspan="3">资源分析</td>
+        <td>小文件占比</td>
+        <td>小文件较多的目录或者表</td>
+    </tr>
+    <tr>
+        <td>文件冷热占比</td>
+        <td>冷数据存储较多的目录或者表</td>
+    </tr>
+    <tr>
+        <td>历史文件被修改和访问</td>
+        <td>超过5年的历史文件被修改和访问</td>
+    </tr>
+    <tr>
+        <td rowspan="6">StarRocks</td>
+        <td rowspan="4">资源分析</td>
+        <td>分桶不合理</td>
+        <td>tablet size太小或者太大</td>
+    </tr>
+    <tr>
+        <td>分区不合理</td>
+        <td>空分区、过大或者过小的分区</td>
+    </tr>
+    <tr>
+        <td>扫描数据量过多</td>
+        <td>根据执行计划判断扫描数据量过多的查询</td>
+    </tr>
+    <tr>
+        <td>扫描数据量过多</td>
+        <td>根据执行计划判断扫描数据量过多的查询</td>
+    </tr>
 </table>
+
 
 ## 看板
 
