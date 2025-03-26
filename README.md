@@ -162,7 +162,7 @@
     </tr>
     <tr>
         <td rowspan="6">StarRocks</td>
-        <td rowspan="4">资源分析</td>
+        <td rowspan="5">资源分析</td>
         <td>分桶不合理</td>
         <td>tablet size太小或者太大</td>
     </tr>
@@ -175,8 +175,12 @@
         <td>根据执行计划判断扫描数据量过多的查询</td>
     </tr>
     <tr>
-        <td>扫描数据量过多</td>
-        <td>根据执行计划判断扫描数据量过多的查询</td>
+        <td>查询频次分析</td>
+        <td>对表按照查询次数排序</td>
+    </tr>
+    <tr>
+        <td>导入分析</td>
+        <td>对导入频次和数据量分析</td>
     </tr>
 </table>
 
